@@ -11,7 +11,7 @@ def oneAway(s1, s2):
   mismatches = 0
   
   while(i < len(s1) or j < len(s2)):
-    if j >= len(s2) and i < len(s1): mismatches += 1
+    if j >= len(s2): mismatches += 1
     
     if s[i] == s[j]:
       i += 1
