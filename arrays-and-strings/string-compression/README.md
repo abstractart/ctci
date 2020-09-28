@@ -1,3 +1,5 @@
+Сам без подсказки написал, изи
+
 ```python3
 def stringCompression(s):
   if len(s) == 0: return ""
