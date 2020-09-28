@@ -1,5 +1,6 @@
 # One Away
 
+Моё решение:
 ```python3
 def oneAway(s1, s2):
   if s1 == s2: return True
