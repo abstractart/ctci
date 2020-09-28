@@ -38,3 +38,6 @@ def checkPermutation(s1, s2):
     
   return True
 ```
+
+# Решение 4
+Похоже на 3 только используется массив 256 элементов (ASCII) вместо counts
