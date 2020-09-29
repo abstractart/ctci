@@ -20,5 +20,7 @@ Cracking the Coding Interview
 - [ ] Threads & Locks
 - [ ] Moderate
 - [ ] Hard
+
+
 Ссылки
 - [Чужие решения на Python3 (Для сравнения и вдохновения)](https://github.com/careercup/CtCI-6th-Edition-Python)
