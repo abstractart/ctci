@@ -16,9 +16,11 @@ class Solution:
 		while(curr):
 			if curr.val not in cache:
 				cache.add(curr.val)
+				prev = curr
+			  	curr = curr.next
 			else:
 				prev.next = curr.next
 			
-			prev = curr
+			prev = prev.next
 			curr = curr.next
 ```
