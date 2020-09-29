@@ -26,4 +26,75 @@ def zeroMatrix(matrix):
       matrix[row][i] = 0
   
   return matrix
+  
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+  def test_1(self):
+      m = []
+      expected = []
+      self.assertEqual(zeroMatrix(m), expected)
+
+  def test_2(self):
+      m = [[1, 0, 1], [1, 1, 1]]
+      expected = [[0,0,0], [1, 0,1]]
+      self.assertEqual(zeroMatrix(m), expected)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+следующий вариант решения - если нашли 0 то скипаем строчку и столбец так как там всё равно нули будут
+```python3
+def zeroMatrix(matrix):
+  if len(matrix) == 0: return matrix
+  
+  m = len(matrix)
+  n = len(matrix[0])
+  
+  cols = set()
+  rows = set()
+  
+  i = j = 0
+  
+  while(i < m):
+    while(j < n):
+      if matrix[i][j] != 0:
+        j += 1
+        continue
+      
+      rows.add(i)
+      cols.add(j)
+      j += 1
+      break
+    i += 1
+  
+  for col in cols:
+    for i in range(m):
+      matrix[i][col] = 0
+      
+  for row in rows:
+    for i in range(n):
+      matrix[row][i] = 0
+
+  return matrix
+      
+      
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+  def test_1(self):
+      m = []
+      expected = []
+      self.assertEqual(zeroMatrix(m), expected)
+
+  def test_2(self):
+      m = [[1, 0, 1], [1, 1, 1]]
+      expected = [[0,0,0], [1, 0,1]]
+      self.assertEqual(zeroMatrix(m), expected)
+
+if __name__ == '__main__':
+    unittest.main()
 ```
