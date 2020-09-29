@@ -69,7 +69,8 @@ def zeroMatrix(matrix):
       j += 1
       break
     i += 1
-  
+    if j == len(n): j = 0
+
   for col in cols:
     for i in range(m):
       matrix[i][col] = 0
