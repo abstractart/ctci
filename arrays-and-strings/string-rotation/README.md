@@ -84,7 +84,6 @@ class Solution:
 class Solution:
     def rotateString(self, s1, s2):
         if len(s1) != len(s2): return False
-        if len(s1) == 0: return True
 
         return s1 in s2 + s2
 ```
