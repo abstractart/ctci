@@ -3,6 +3,7 @@
 ```python3
 def stringRotation(s1, s2):
   if len(s1) != len(s2): return False
+  if len(s1) == 0: return True # Всплыло когда тестил
   
   i = 0
   j = s2.find(s1[i])
@@ -17,4 +18,35 @@ def stringRotation(s1, s2):
       return False
       
   return True
+      
+      
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+  def test_1(self):
+      s1 = ""
+      s2 = ""
+      self.assertEqual(stringRotation(s1, s2), True)
+
+  def test_2(self):
+      s1 = "wat"
+      s2 = "tae"
+      self.assertEqual(stringRotation(s1, s2), False)
+  def test_3(self):
+      s1 = "wat"
+      s2 = "taw"
+      self.assertEqual(stringRotation(s1, s2), False)
+
+  def test_4(self):
+      s1 = "waterbottle"
+      s2 = "lewaterbott"
+      self.assertEqual(stringRotation(s1, s2), True)
+
+  def test_5(self):
+      s1 = "waterbottle"
+      s2 = "waterbottle"
+      self.assertEqual(stringRotation(s1, s2), True)
+if __name__ == '__main__':
+    unittest.main()
 ```
