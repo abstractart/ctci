@@ -7,7 +7,7 @@ def stringRotation(s1, s2):
   i = 0
   j = s2.find(s1[i])
   
-  if j < 0: return False
+  if j < 0: return False # Когда писал на листочке об этом кейсе забыл
   
   while(i < len(s1)):
     if s1[i] == s2[j]:
