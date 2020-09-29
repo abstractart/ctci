@@ -3,7 +3,7 @@ Cracking the Coding Interview
 
 
 Прогресс:
-- ``Строки и массивы`` (stringPermutation повторить)
+- ``Строки и массивы`` (stringPermutation, oneAway повторить)
 
 
 Ссылки
