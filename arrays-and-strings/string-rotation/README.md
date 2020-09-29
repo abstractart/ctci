@@ -1,4 +1,4 @@
-Сам решил (Неправильное решение, литкод не одобрил)
+# Сам решил (Неправильное решение, литкод не одобрил)
 
 ```python3
 def stringRotation(s1, s2):
@@ -52,7 +52,7 @@ if __name__ == '__main__':
 ```
 
 
-Решение одобренное литкодом:
+# Решение одобренное литкодом:
 ```python3
 class Solution:
     def rotateString(self, s1, s2):
@@ -78,4 +78,13 @@ class Solution:
             if s[i] == c: indexes.append(i)
 
         return indexes
+```
+# Самое крутое решение
+```python3
+class Solution:
+    def rotateString(self, s1, s2):
+        if len(s1) != len(s2): return False
+        if len(s1) == 0: return True
+
+        return s1 in s2 + s2
 ```
