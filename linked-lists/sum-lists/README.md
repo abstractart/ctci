@@ -60,3 +60,27 @@ def addTwoNumbers(head1, head2):
 
     return result
 ```
+
+Решение которое увидел на просторах интернета:
+Идея: так как на выходе нам нужно число а не список мы можем сделать так:
+Прошлись по первому списку собрали число.
+Прошлись по второму списку собрали число.
+Вернули сумму.
+```python3
+def sumTwoLists(head1, head2):
+    n1 = listToInt(head1)
+    n2 = listToInt(head2)
+    
+    return n1 + n2
+    
+def listToInt(head):
+    result = 0
+    multiplier = 1
+    
+    while(head):
+        result += head.val * multiplier
+        multiplier *= 10
+        head = head.next
+ 
+    return result
+```
