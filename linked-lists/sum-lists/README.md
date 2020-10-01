@@ -42,16 +42,19 @@ def addTwoNumbers(head1, head2):
 
     while(head1 or head2):
         val = reminder
-        if head1: val += head1.val
-        if head2: val += head2.val
+        
+        if head1:
+            val += head1.val
+            head1 = head1.next
+        
+        if head2:
+            val += head2.val
+            head2 = head2.next
         
         result += (val % 10) * multiplier
 
         multiplier *= 10
         reminder = val // 10
-
-        if head1.next: head1 = head1.next
-        if head2.next: head2 = head2.next
 
     result += reminder * multiplier
 
