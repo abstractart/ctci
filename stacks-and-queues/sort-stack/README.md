@@ -23,17 +23,13 @@ class Solution:
 ```
 
 Второе решение, через один (не подсматривал)
-```
+```python3
 class Solution:
 	def sort(self, stack):
 		tmp = []
 		
 		while(len(stack) > 0):
 			e = stack.pop()
-			
-			if len(tmp) == 0:
-				tmp.append(e)
-				continue
 			
 			while(len(tmp) > 0 and tmp[-1] > e):
 				stack.append(tmp.pop())
