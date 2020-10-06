@@ -55,7 +55,7 @@ class SetOfStacks:
     if self.isEmpty(): raise
     
     val =  self.set.val.pop()
-    while(self.set and self.self.set.val.isEmpty()):
+    while(self.set and self.set.val.isEmpty()):
       self.set = self.set.next
 
     return val
