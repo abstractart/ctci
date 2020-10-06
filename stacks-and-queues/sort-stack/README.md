@@ -1,25 +1,46 @@
+
+Первое решение через 2 стека
 ```python3
 class Solution:
 	def sort(self, stack):
-		sorted_stack = []
 		tmp = []
 		
 		while(len(stack) > 0):
 			e = stack.pop()
 			
-			if len(sorted_stack) == 0:
-				sorted_stack.append(e)
+			if len(tmp) == 0:
+				tmp.append(e)
 				continue
 			
-			while(len(sorted_stack) > 0 and sorted_stack[-1] > e):
-				tmp.append(sorted_stack.pop())
+			while(len(tmp) > 0 and tmp[-1] > e):
+				stack.append(tmp.pop())
 			
-			sorted_stack.append(e)
-			
-			while(len(tmp) > 0):
-				sorted_stack.append(tmp.pop())
+			tmp.append(e)
 				
 		
-		while(len(sorted_stack) > 0):
-			stack.append(sorted_stack.pop())
+		while(len(tmp) > 0):
+			stack.append(tmp.pop())
+```
+
+Второе решение, через один (не подсматривал)
+```
+class Solution:
+	def sort(self, stack):
+		tmp = []
+		
+		while(len(stack) > 0):
+			e = stack.pop()
+			
+			if len(tmp) == 0:
+				tmp.append(e)
+				continue
+			
+			while(len(tmp) > 0 and tmp[-1] > e):
+				stack.append(tmp.pop())
+			
+			tmp.append(e)
+				
+		
+		while(len(tmp) > 0):
+			stack.append(tmp.pop())
 ```
