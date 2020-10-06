@@ -1,5 +1,6 @@
 # Intersection
 https://leetcode.com/problems/intersection-of-two-linked-lists/
+
 Собственное решение:
 ```python3
 class Solution:
