@@ -1,5 +1,33 @@
 # Zero Matrix
+[LeetCode](https://leetcode.com/articles/set-matrix-zeroes/)
 
+UPD: Accepted LeetCode:
+```python
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        if len(matrix) == 0: return
+        
+        m = len(matrix)
+        n = len(matrix[0])
+
+        cols = set()
+        rows = set()
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] != 0: continue
+                
+                rows.add(i)
+                cols.add(j)
+
+        for col in cols:
+            for i in range(m):
+                if i in rows: continue
+                
+                matrix[i][col] = 0
+
+        for row in rows:
+            matrix[row] = [0] * n
+```
 Решение сходу придуманное.
 
 Cложность - квадратичная + линейно растёт память.
