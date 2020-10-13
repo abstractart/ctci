@@ -1,5 +1,7 @@
 # Сам решил (Неправильное решение, литкод не одобрил)
 
+https://leetcode.com/problems/rotate-string/
+
 ```python3
 def stringRotation(s1, s2):
   if len(s1) != len(s2): return False
